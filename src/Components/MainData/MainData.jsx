@@ -6,7 +6,7 @@ const MainData = ({ sendDataParam }) => {
     sendDataParam: PropTypes.any.isRequired, // or specify the correct prop type
   };
 
-  console.log(sendDataParam);
+  // console.log(sendDataParam);
   const { knowledge_panel } = sendDataParam;
   //   console.log("main-> ", knowledge_panel);
   return (
@@ -25,6 +25,7 @@ const MainData = ({ sendDataParam }) => {
               href={knowledge_panel?.description?.url}
               target="_blank"
               rel="noreferrer"
+              title="Open in new tab"
             >
               {knowledge_panel?.description?.url}
             </a>

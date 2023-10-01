@@ -85,3 +85,23 @@ main {
 .ri-send-plane-2-line:hover {
   color: #499557;
 }
+
+.loading {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .input-container {
+    width: 90%;
+  }
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  nav {
+    display: none;
+  }
+}

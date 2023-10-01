@@ -1,0 +1,74 @@
+.RelatedKeyWord-container {
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #000;
+  margin: 1rem auto;
+  width: 50%;
+}
+
+.RelatedKeyWord-container > div {
+  display: grid;
+  grid-template-columns: repeat(3, 15rem);
+  width: 100%;
+  margin: 1rem auto;
+  gap: 1rem;
+}
+
+.RelatedKeyWord {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: #499557 2px solid;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.5s;
+}
+
+.RelatedKeyWord:hover {
+  background-color: #499557;
+  color: #fff;
+}
+
+@media screen and (max-width: 1050px) {
+  .RelatedKeyWord-container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .RelatedKeyWord-container > div {
+    grid-template-columns: repeat(2, 14rem);
+  }
+  .RelatedKeyWord-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .RelatedKeyWord-container {
+    width: 70%;
+  }
+  .RelatedKeyWord {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 638px) {
+  .RelatedKeyWord-container {
+    width: 65%;
+  }
+  .RelatedKeyWord-container > div {
+    grid-template-columns: repeat(2, 10rem);
+  }
+}
+@media screen and (max-width: 465px) {
+  .RelatedKeyWord-container > div {
+    grid-template-columns: repeat(1, 10rem);
+  }
+  .RelatedKeyWord-container {
+    width: 40%;
+  }
+}

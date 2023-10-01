@@ -1,0 +1,112 @@
+.Heading {
+  text-align: center;
+}
+
+.MainData-MoreResults-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #000;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.MainData-MoreResults-container-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  margin: 1rem auto;
+  gap: 1rem;
+}
+
+.MainData-MoreResults {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border: #499557 2px solid;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 1.2rem;
+}
+
+.title-more-results {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.description-more-results {
+  font-size: 1.2rem;
+  color: #000;
+  text-align: justify;
+}
+
+.button-more-results {
+  background-color: #499557;
+  color: #f7f7f7;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+}
+
+.button-more-results:hover {
+  background-color: #285530;
+  color: #f7f7f7;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.link-more-results {
+  text-decoration: none;
+  color: #f7f7f7;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.link-more-results:active {
+  color: #f7f7f7;
+  transition: 0.5s;
+}
+.link-more-results:visited {
+  color: #000;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 400px) {
+  .link-more-results {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+  .title-more-results {
+    font-size: 1rem;
+  }
+  .description-more-results {
+    font-size: 0.9rem;
+    text-wrap: break-word;
+  }
+  .MainData-MoreResults-container {
+    width: 100%;
+  }
+}

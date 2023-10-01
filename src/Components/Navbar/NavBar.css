@@ -9,6 +9,10 @@ nav > div {
   font-weight: 700;
   font-size: 1.5rem;
   margin: 0 1rem;
-  color: #000;
+  color: #1e3d24;
   cursor: pointer;
+}
+
+nav > div:hover {
+  color: #499557;
 }

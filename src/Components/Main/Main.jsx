@@ -2,15 +2,19 @@ import IMg from "../../assets/IMg.png";
 import "remixicon/fonts/remixicon.css";
 import "./Main.css";
 import { useState } from "react";
-import { useEffect } from "react";
 import axios from "axios";
 import MainData from "../MainData/MainData";
+import MoreResults from "../MainData/MoreResults";
+import RelatedKeyWord from "../MainData/RelatedKeyWord";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 const Main = () => {
   const [currentInput, setCurrentInput] = useState("");
   const [sendDataParam, setSendDataParam] = useState([]);
+  const [Loading, setLoading] = useState(false);
 
   const sendData = async () => {
+    setLoading(true);
     const url = "https://google-web-search1.p.rapidapi.com/";
     const options = {
       method: "GET",
@@ -21,7 +25,7 @@ const Main = () => {
         related_keywords: "true",
       },
       headers: {
-        "X-RapidAPI-Key": "54376d2a3amsh2811ae172f3c4d1p1100f2jsne2fc79adec96",
+        "X-RapidAPI-Key": import.meta.env.VITE_APP_KEY,
         "X-RapidAPI-Host": "google-web-search1.p.rapidapi.com",
       },
     };
@@ -32,7 +36,9 @@ const Main = () => {
     } catch (error) {
       console.error(error);
     }
+    setLoading(false);
   };
+  // <PacmanLoader color="#36d7b7" />
 
   return (
     <main>
@@ -65,7 +71,18 @@ const Main = () => {
           <i className="ri-send-plane-2-line" onClick={sendData} />
         </div>
       </div>
-      <MainData sendDataParam={sendDataParam} />
+
+      {Loading ? (
+        <div className="loading">
+          <PacmanLoader color="#499557" />
+        </div>
+      ) : (
+        <>
+          <MainData sendDataParam={sendDataParam} />
+          <MoreResults sendDataParam={sendDataParam} />
+          <RelatedKeyWord sendDataParam={sendDataParam} />
+        </>
+      )}
     </main>
   );
 };
